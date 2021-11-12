@@ -1,0 +1,30 @@
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    width: 500px;
+
+}
+
+.el {
+    margin-top: 20px;
+    border-bottom: solid 1px #1d447e;
+}
+
+.item-enter-active {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.item-enter {
+    opacity: 1;
+}
+
+.item-exit {
+    opacity: 1;
+}
+
+.item-exit-active {
+    opacity: 0;
+    transition: all 1s;
+}

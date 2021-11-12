@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./layouts/Header/Header";
+import Container from "./components/Container/Container";
+import ReactModal from 'react-modal'
+import Add from "./components/Modals/Add/Add";
+import {useSelector} from "react-redux";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let show = useSelector(state => state.contacts.showModal)
+    return (
+        <>
+            <Header>
+                <Container/>
+                <ReactModal isOpen={show}
+                            overlayClassName="overlayModal"
+                            className="content"
+                            ariaHideApp={false}
+                            closeTimeoutMS={500}>
+                    <Add/>
+                </ReactModal>
+            </Header>
+        </>
+    )
 }
 
 export default App;

@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    margin: 30px auto;
+}
+
+.container button {
+    display: block;
+    width: 200px;
+    height: 60px;
+    outline: none;
+    border: none;
+    background: #1d447e;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    transition: all .2s;
+}
+
+.container button:hover {
+    background: #338d8d;
+}
+

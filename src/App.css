@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+.overlayModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75)
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+    width: 500px;
+    min-height: 221px;
+    border: none;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+    position: relative;
+    overflow: auto;
+    outline: none;
+    padding: 20px;
+    top: 33%;
+    left: 36%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: all 500ms ease-in-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ReactModal__Overlay--after-open {
+    opacity: 1;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ReactModal__Overlay--before-close {
+    opacity: 0;
 }
